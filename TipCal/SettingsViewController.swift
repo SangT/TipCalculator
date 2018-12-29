@@ -10,12 +10,38 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var tipControlSet: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("view will appear")
+        let defaults = UserDefaults.standard
+        tipControlSet.setEnabled(true, forSegmentAt: defaults.integer(forKey: "myInt"))
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("view did appear")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("view will disappear")
+        let defaults = UserDefaults.standard
+        let position = tipControlSet.selectedSegmentIndex
+        defaults.set(position, forKey: "myInt")
+        defaults.synchronize()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("view did disappear")
+    }
 
     /*
     // MARK: - Navigation

@@ -24,12 +24,19 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let defaults = UserDefaults.standard
+        tipControl.selectedSegmentIndex = defaults.integer(forKey: "myInt")
+    }
+    
     @IBAction func calculateTip(_ sender: Any) {
         
         let tipPercentages = [0.15, 0.2, 0.25]
-        
         let bill = (Double) (billField.text!) ?? 0
-        let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
+        tipControl.setEnabled(true, forSegmentAt: tipControl.selectedSegmentIndex)
+        let num = tipPercentages[tipControl.selectedSegmentIndex]
+        let tip = bill * num
         let total = bill + tip
         
         tipLabel.text = String(format: "$%.2f", tip)
