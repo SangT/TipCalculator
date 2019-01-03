@@ -222,16 +222,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default Tip Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4en-1L-K6a">
-                                <rect key="frame" x="36" y="125" width="173" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Tip Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4en-1L-K6a">
+                                <rect key="frame" x="35" y="109" width="173" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e1d-UC-Azy">
-                                <rect key="frame" x="36" y="184" width="314" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e1d-UC-Azy">
+                                <rect key="frame" x="35" y="168" width="305" height="29"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <segments>
                                     <segment title="15%"/>
@@ -243,6 +241,13 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <color key="tintColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="e1d-UC-Azy" firstAttribute="leading" secondItem="uT6-n8-bAW" secondAttribute="leading" constant="35" id="A8N-dW-8Kh"/>
+                            <constraint firstItem="4en-1L-K6a" firstAttribute="leading" secondItem="uT6-n8-bAW" secondAttribute="leading" constant="35" id="aww-W2-Zi1"/>
+                            <constraint firstItem="4en-1L-K6a" firstAttribute="top" secondItem="xb2-uG-VlD" secondAttribute="bottom" constant="45" id="dDz-yy-sKS"/>
+                            <constraint firstItem="e1d-UC-Azy" firstAttribute="top" secondItem="4en-1L-K6a" secondAttribute="bottom" constant="35" id="dOU-qV-cbG"/>
+                            <constraint firstAttribute="trailing" secondItem="e1d-UC-Azy" secondAttribute="trailing" constant="35" id="sgU-Gg-LJd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sNs-Pf-327">
                         <barButtonItem key="backBarButtonItem" title="Back" id="SFs-pZ-eF8"/>
