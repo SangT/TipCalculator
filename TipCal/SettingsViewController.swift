@@ -20,7 +20,7 @@ class SettingsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let defaults = UserDefaults.standard
-        tipControlSet.setEnabled(true, forSegmentAt: defaults.integer(forKey: "myInt"))
+        tipControlSet.selectedSegmentIndex = defaults.integer(forKey: "myInt")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
