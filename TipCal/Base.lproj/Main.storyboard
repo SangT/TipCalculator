@@ -63,7 +63,7 @@
                                         </segments>
                                         <color key="tintColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="mTI-7t-DCE"/>
+                                            <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="rtP-M0-wuf"/>
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DvS-Lm-rW3">
